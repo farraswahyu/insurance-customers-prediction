@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Edit Response</title>
+</head>
+<body>
+<div align="center">
+    <h1>Edit Response</h1>
+    <br />
+    <form action="#" th:action="@{/updateresponse}" th:object="${response}"
+          method="post">
+
+        <table border="0" cellpadding="10">
+            <tr>
+                <td>ID:</td>
+                <td><input type="text" th:field="*{id}" readonly="readonly" /></td>
+            </tr>
+            <!--<tr>
+                <td>ID Customer:</td>
+                <td><input type="text" th:field="*{iditem}" /> <a th:href="@{/showitem/__*{iditem}__}" th:target="_blank">Show Customer</a> </td>
+                &lt;!&ndash;<a href="#" onClick="MyWindow=window.open('http://www.google.com','MyWindow','width=600,height=300'); return false;">Click Here</a>&ndash;&gt;
+            </tr>-->
+            <tr>
+                <td>Customer Name:</td>
+                <td><input type="text" th:field="*{customer.name}" readonly="readonly" /></td>
+            </tr>
+            <tr>
+                <td>Interested in Vehicle Insurance:</td>
+                <td><input type="text" th:field="*{response}" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Save</button> </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
