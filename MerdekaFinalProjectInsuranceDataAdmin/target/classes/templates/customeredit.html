@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Edit Customer Data</title>
+</head>
+<body>
+<div align="center">
+    <h1>Edit Customer Data</h1>
+    <br />
+    <form action="#" th:action="@{/updatecustomer}" th:object="${customer}" method="post">
+
+        <table border="0" cellpadding="10">
+            <tr>
+                <td>Gender:</td>
+                <td><input type="radio" th:field="*{gender}" value="Male" />Male
+                    <input type="radio" th:field="*{gender}" value="Female" />Female<br/></td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td><input type="text" th:field="*{age}" /></td>
+            </tr>
+            <tr>
+                <td>Driving License:</td>
+                <td><input type="checkbox" th:field="*{driving_license}" /><br/></td>
+            </tr>
+            <tr>
+                <td>Region Code:</td>
+                <td><input type="text" th:field="*{region_code}" /></td>
+            </tr>
+            <tr>
+                <td>Previously Insured:</td>
+                <td><input type="checkbox" th:field="*{prev_insured}" /><br/></td>
+            </tr>
+            <tr>
+                <td>Vehicle Age:</td>
+                <td><input type="text" th:field="*{vehicle_age}" /></td>
+            </tr>
+            <tr>
+                <td>Vehicle Damage:</td>
+                <td><input type="checkbox" th:field="*{vehicle_damage}" /><br/></td>
+            </tr>
+            <tr>
+                <td>Annual Premium:</td>
+                <td><input type="text" th:field="*{annual_premium}" /></td>
+            </tr>
+            <tr>
+                <td>Policy Sales Channel:</td>
+                <td><input type="text" th:field="*{policy_sales_channel}" /></td>
+            </tr>
+            <tr>
+                <td>Vintage:</td>
+                <td><input type="text" th:field="*{vintage}" /></td>
+            </tr>
+            <tr>
+                <td>Interested in Vehicle Insurance:</td>
+                <td><input type="checkbox" th:field="*{response}" /><br/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Save</button> </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
